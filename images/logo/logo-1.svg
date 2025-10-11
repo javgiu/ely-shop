@@ -1,0 +1,17 @@
+<svg width="120" height="50" viewBox="0 0 120 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Texto "Ely" -->
+  <text x="60" y="35" 
+        font-family="Cormorant Garamond, serif" 
+        font-size="32" 
+        font-weight="600" 
+        fill="#D4AF37" 
+        text-anchor="middle">
+    Ely
+  </text>
+  
+  <!-- Línea decorativa debajo -->
+  <line x1="30" y1="42" x2="90" y2="42" 
+        stroke="#D4AF37" 
+        stroke-width="1.5" 
+        stroke-linecap="round"/>
+</svg>

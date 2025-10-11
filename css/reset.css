@@ -1,0 +1,123 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin && padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+        scroll-behavior: smooth; /* ⬅️ Smooth scroll nativo */
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* 6. Full viewport height */
+    min-height: 100vh;
+    /* 7. Tabular numbers for consistent pricing */
+    font-variant-numeric: tabular-nums;
+}
+
+/* 8. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 9. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 10. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 11. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+  12. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* 13. Remove list style */
+ul,
+ol {
+    list-style-type: none;
+}
+
+/* 14. Reset links*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 15. Custom form controls */
+input[type='checkbox'],
+input[type='radio'] {
+    appearance: none;
+    min-width: 20px;
+    min-height: 20px;
+    cursor: pointer;
+}
+
+/* 16. Button reset */
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+/* 17. Improved focus indicators */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
