@@ -44,4 +44,9 @@
     .hero-subtitle {
         font-size: var(--font-size-base);
     }
+
+    .hero .btn {
+        width: 85%;
+        max-width: 300px;
+    }
 }
