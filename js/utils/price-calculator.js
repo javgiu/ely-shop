@@ -1,14 +1,14 @@
 export function calculatePrice(product, selectedOptions) {
   let finalPrice = product.basePrice;
 
-  const selectedColor = product.options.color.find(
+  const selectedColor = product.options.colors.find(
     (color) => color.value === selectedOptions.color
   );
   if (selectedColor) {
     finalPrice += selectedColor.priceModifier;
   }
 
-  const selectedClosure = product.options.closure.find(
+  const selectedClosure = product.options.closures.find(
     (closure) => closure.value === selectedOptions.closure
   );
   if (selectedClosure) {
