@@ -1,5 +1,5 @@
 import { initMobileMenu } from "./components/mobile-menu.js";
-import { initSmoothScroll } from "./utils/scroll-effects.js";
+import { initSmoothScroll } from "./utils/smooth-scroll.js";
 import { renderProducts } from "./utils/render-products.js";
 
 function init() {
