@@ -12,9 +12,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "gold", label: "Gold", priceModifier: 0 },
-        { value: "silver", label: "Silver", priceModifier: 0 },
-        { value: "rose-gold", label: "Rose Gold", priceModifier: 2 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "studs", label: "Stud Posts", priceModifier: 0 },
@@ -50,9 +65,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -61,7 +91,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -86,9 +116,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -97,7 +142,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -122,9 +167,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -133,7 +193,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -158,9 +218,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -169,7 +244,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -194,9 +269,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -205,7 +295,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -230,9 +320,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -241,7 +346,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -266,9 +371,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -277,7 +397,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -302,9 +422,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -313,7 +448,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
@@ -338,9 +473,24 @@ export const products = [
 
     options: {
       colors: [
-        { value: "white", label: "White", priceModifier: 0 },
-        { value: "pink", label: "Blush Pink", priceModifier: 0 },
-        { value: "lavender", label: "Lavender", priceModifier: 1 },
+        {
+          value: "gold",
+          label: "Gold",
+          priceModifier: 0,
+          hex: "#d4af37",
+        },
+        {
+          value: "silver",
+          label: "Silver",
+          priceModifier: 0,
+          hex: "c0c0c0",
+        },
+        {
+          value: "rose-gold",
+          label: "Rose-gold",
+          priceModifier: 1,
+          hex: "b76e79",
+        },
       ],
       closures: [
         { value: "hooks", label: "Fish Hooks", priceModifier: 0 },
@@ -349,7 +499,7 @@ export const products = [
     },
 
     defaultOptions: {
-      color: "white",
+      color: "gold",
       closure: "hooks",
     },
 
