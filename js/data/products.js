@@ -8,7 +8,8 @@ export const products = [
     category: "polymer-clay",
     description:
       "Elegant crescent moon shaped earrings with metallic finish. Perfect for evening wear.",
-    image: "images/productos/placeholder-1.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -22,13 +23,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -61,7 +62,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -75,13 +77,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -112,7 +114,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -126,13 +129,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -163,7 +166,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -177,13 +181,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -214,7 +218,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -228,13 +233,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -265,7 +270,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -279,13 +285,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -316,7 +322,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -330,13 +337,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -367,7 +374,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -381,13 +389,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -418,7 +426,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -432,13 +441,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [
@@ -469,7 +478,8 @@ export const products = [
     category: "cold-porcelain",
     description:
       "Delicate handcrafted flower design. Lightweight and comfortable for all-day wear.",
-    image: "images/productos/placeholder-2.jpg",
+    image:
+      "https://via.placeholder.com/400x400/FAF8F3/D4AF37?text=Floral+Earrings",
 
     options: {
       colors: [
@@ -483,13 +493,13 @@ export const products = [
           value: "silver",
           label: "Silver",
           priceModifier: 0,
-          hex: "c0c0c0",
+          hex: "#c0c0c0",
         },
         {
           value: "rose-gold",
           label: "Rose-gold",
           priceModifier: 1,
-          hex: "b76e79",
+          hex: "#b76e79",
         },
       ],
       closures: [

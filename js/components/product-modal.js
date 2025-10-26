@@ -1,3 +1,5 @@
+import { calculatePrice, formatPrice } from "../utils/price-calculator.js";
+
 const modal = document.getElementById("product-modal");
 
 export function initProductModal() {
@@ -17,7 +19,8 @@ export function initProductModal() {
 export function openProductModal(product) {
   const modalBody = modal.querySelector(".modal-body");
 
-  console.log(product);
+  const initialPrice = calculatePrice(product, product.defaultOptions);
+
   modalBody.innerHTML = `
         <div class="modal-product">
             <div class="modal-product-image">
@@ -70,7 +73,9 @@ export function openProductModal(product) {
 
                 <div class="modal-product-price">
                     <span class="price-label">Price:</span>
-                    <span class="price-value">$${product.basePrice}</span>
+                    <span class="price-value">${formatPrice(
+                      initialPrice
+                    )}</span>
                 </div>
 
                 <button class="btn btn-primary modal-add-to-cart">
@@ -80,5 +85,41 @@ export function openProductModal(product) {
             </div>
         </div>
     `;
+
+  setupPriceListeners(product);
+
   modal.showModal();
+}
+
+function setupPriceListeners(product) {
+  const colorButtons = modal.querySelectorAll(".color-btn");
+  const closureSelect = modal.querySelector(".closure-select");
+  const priceValueElement = modal.querySelector(".price-value");
+
+  let selectedOptions = {
+    color: product.defaultOptions.color,
+    closure: product.defaultOptions.closure,
+  };
+
+  function updatePrice() {
+    const newPrice = calculatePrice(product, selectedOptions);
+    priceValueElement.textContent = formatPrice(newPrice);
+  }
+
+  colorButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      colorButtons.forEach((button) => button.classList.remove("active"));
+
+      button.classList.add("active");
+
+      selectedOptions.color = button.dataset.color;
+
+      updatePrice();
+    });
+  });
+
+  closureSelect.addEventListener("change", (event) => {
+    selectedOptions.closure = event.target.value;
+    updatePrice();
+  });
 }
