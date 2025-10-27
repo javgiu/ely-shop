@@ -153,5 +153,34 @@
         <!-- Aquí irá el contenido dinámico del producto -->
       </div>
     </dialog>
+
+    <!-- Modal de Carrito -->
+    <dialog id="cart-modal" class="cart-modal">
+      <div class="modal-header">
+        <h2 class="cart-modal-title">Your Cart</h2>
+        <button class="modal-close" aria-label="Close cart">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="cart-items hidden" id="cart-items">
+          <!-- Aqui se renderizaran los items dinamicamente -->
+        </div>
+        <div class="cart-empty show" id="cart-empty">
+          <p>Your cart is empty</p>
+          <button class="btn btn-primary">Continue Shopping</button>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span class="total-label">Total:</span
+          ><span class="total-value" id="cart-total">$0.00</span>
+        </div>
+        <div class="cart-actions">
+          <button class="btn btn-secondary" id="clear-cart-btn">
+            Clear Cart
+          </button>
+          <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

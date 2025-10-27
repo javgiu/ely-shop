@@ -1,5 +1,3 @@
-@import "../variables.css";
-
 .shop-section {
   padding: var(--spacing-xxl) 0;
   background: linear-gradient(225deg, var(--color-beige) 0%, var(--color-beige-light) 100%);

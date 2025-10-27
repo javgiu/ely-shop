@@ -1,5 +1,3 @@
-@import "../variables.css";
-
 header {
     min-height: var(--header-height);
     background-color: var(--color-beige);
@@ -123,18 +121,6 @@ nav {
 
 .cart-count.updated {
     animation: cartBounce 0.3s ease;
-}
-
-@keyframes cartBounce {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.3);
-    }
 }
 
 @media (max-width: 768px) {

@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "reset.css";
+@import "variables.css";
+@import "animation.css";
 @import "base.css";
 @import "components/nav-bar.css";
 @import "components/hero.css";
 @import "components/shop.css";
 @import "components/product-modal.css";
+@import "components/cart-modal.css";

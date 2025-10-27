@@ -17,7 +17,6 @@ export function updateCartCounter() {
 
   if (cartCountElement) {
     cartCountElement.textContent = count;
-    console.log(cartCountElement);
 
     cartCountElement.classList.add("updated");
     setTimeout(() => {
