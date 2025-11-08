@@ -6,40 +6,27 @@ import {
 } from "../utils/cart.js";
 import { formatPrice } from "../utils/price-calculator.js";
 import { updateCartCounter } from "./cart-counter.js";
+import { showInfoToast, showWarningToast } from "./toast.js";
+import { openModal, closeModal } from "../utils/modal-system.js";
 
 const modal = document.getElementById("cart-modal");
-
-export function initCartModal() {
-  const closeButton = modal.querySelector(".modal-close");
-  const continueShoppingButton = modal.querySelector(".cart-empty .btn");
-
-  closeButton.addEventListener("click", () => {
-    modal.close();
-  });
-
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.close();
-    }
-  });
-
-  if (continueShoppingButton) {
-    continueShoppingButton.addEventListener("click", () => {
-      modal.close();
-    });
-  }
-}
+let persistentListenersInitialized = false;
 
 export function openCartModal() {
   renderCartItems();
-  modal.showModal();
+
+  if (!persistentListenersInitialized) {
+    setupPersistentListeners();
+    persistentListenersInitialized = true;
+  }
+  openModal(modal.id);
 }
 
 function renderCartItems() {
   const cart = getCart();
-  const cartItemsContainer = document.getElementById("cart-items");
-  const cartEmptyContainer = document.getElementById("cart-empty");
-  const cartTotalElement = document.getElementById("cart-total");
+  const cartItemsContainer = modal.querySelector("#cart-items");
+  const cartEmptyContainer = modal.querySelector("#cart-empty");
+  const cartTotalElement = modal.querySelector("#cart-total");
 
   if (cart.length === 0) {
     cartItemsContainer.classList.add("hidden");
@@ -62,6 +49,28 @@ function renderCartItems() {
 
   // Add event listeners to the buttons
   setupCartItemListeners();
+}
+
+function setupPersistentListeners() {
+  const clearCartBtn = document.getElementById("clear-cart-btn");
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener("click", () => {
+      if (confirm("Are you sure you want to clear the cart?")) {
+        clearCart();
+        renderCartItems();
+        updateCartCounter();
+
+        showWarningToast("Cart cleared");
+      }
+    });
+  }
+
+  const checkoutBtn = document.getElementById("checkout-btn");
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", () => {
+      console.log("Checkout functionality is not implemented yet.");
+    });
+  }
 }
 
 function createCartItemHTML(item) {
@@ -130,6 +139,7 @@ function setupCartItemListeners() {
           updateQuantity(itemId, item.quantity - 1);
         } else {
           removeFromCart(itemId);
+          showInfoToast(`${item.name} removed from cart`);
         }
         renderCartItems();
         updateCartCounter();
@@ -141,29 +151,17 @@ function setupCartItemListeners() {
   removeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const itemId = button.dataset.itemId;
+
+      const cart = getCart();
+      const item = cart.find((i) => i.id === itemId);
+      const itemName = item?.name || "Item";
+
       removeFromCart(itemId);
       renderCartItems();
       updateCartCounter();
+      showInfoToast(`${itemName} removed from cart`);
     });
   });
-
-  const clearCartBtn = document.getElementById("clear-cart-btn");
-  if (clearCartBtn) {
-    clearCartBtn.addEventListener("click", () => {
-      if (confirm("Are you sure you want to clear the cart?")) {
-        clearCart();
-        renderCartItems();
-        updateCartCounter();
-      }
-    });
-  }
-
-  const checkoutBtn = document.getElementById("checkout-btn");
-  if (checkoutBtn) {
-    checkoutBtn.addEventListener("click", () => {
-      console.log("Checkout functionality is not implemented yet.");
-    });
-  }
 }
 
 function calculateTotal(cart) {

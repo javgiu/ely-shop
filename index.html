@@ -145,42 +145,80 @@
     </footer>
 
     <!-- Modal de Producto (agregar antes de </body>) -->
-    <dialog id="product-modal" class="product-modal">
-      <div class="modal-header">
-        <button class="modal-close" aria-label="Close modal">×</button>
+    <div
+      id="product-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal-overlay"></div>
+      <div class="modal-container">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              class="modal-close"
+              aria-label="Close modal"
+              data-modal-close
+            >
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Aquí irá el contenido dinámico del producto -->
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <!-- Aquí irá el contenido dinámico del producto -->
-      </div>
-    </dialog>
+    </div>
 
     <!-- Modal de Carrito -->
-    <dialog id="cart-modal" class="cart-modal">
-      <div class="modal-header">
-        <h2 class="cart-modal-title">Your Cart</h2>
-        <button class="modal-close" aria-label="Close cart">×</button>
+    <div
+      class="modal"
+      id="cart-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal-overlay"></div>
+      <div class="modal-container">
+        <div class="modal-content cart-modal-content">
+          <div class="modal-header">
+            <h2 class="cart-modal-title">Your Cart</h2>
+            <button
+              class="modal-close"
+              aria-label="Close cart"
+              data-modal-close
+            >
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="cart-items hidden" id="cart-items"></div>
+            <div class="cart-empty" id="cart-empty">
+              <p>Your cart is empty</p>
+              <button class="btn btn-primary" data-modal-close>
+                Continue Shopping
+              </button>
+            </div>
+          </div>
+          <div class="cart-footer">
+            <div class="cart-total">
+              <span class="total-label">Total:</span>
+              <span class="total-value" id="cart-total">$0.00</span>
+            </div>
+            <div class="cart-actions">
+              <button class="btn btn-secondary" id="clear-cart-btn">
+                Clear Cart
+              </button>
+              <button class="btn btn-primary" id="checkout-btn">
+                Checkout
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <div class="cart-items hidden" id="cart-items">
-          <!-- Aqui se renderizaran los items dinamicamente -->
-        </div>
-        <div class="cart-empty show" id="cart-empty">
-          <p>Your cart is empty</p>
-          <button class="btn btn-primary">Continue Shopping</button>
-        </div>
-      </div>
-      <div class="cart-footer">
-        <div class="cart-total">
-          <span class="total-label">Total:</span
-          ><span class="total-value" id="cart-total">$0.00</span>
-        </div>
-        <div class="cart-actions">
-          <button class="btn btn-secondary" id="clear-cart-btn">
-            Clear Cart
-          </button>
-          <button class="btn btn-primary" id="checkout-btn">Checkout</button>
-        </div>
-      </div>
-    </dialog>
+    </div>
+    <!-- Toast Container External-->
+    <div id="toast-container" class="toast-container"></div>
   </body>
 </html>

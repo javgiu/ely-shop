@@ -1,22 +1,10 @@
 import { calculatePrice, formatPrice } from "../utils/price-calculator.js";
 import { addToCart, getCartCount } from "../utils/cart.js";
 import { updateCartCounter } from "./cart-counter.js";
+import { showSuccessToast } from "./toast.js";
+import { openModal, closeModal } from "../utils/modal-system.js";
 
 const modal = document.getElementById("product-modal");
-
-export function initProductModal() {
-  const closeButton = modal.querySelector(".modal-close");
-
-  closeButton.addEventListener("click", () => {
-    modal.close();
-  });
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.close();
-    }
-  });
-}
 
 export function openProductModal(product) {
   const modalBody = modal.querySelector(".modal-body");
@@ -90,7 +78,7 @@ export function openProductModal(product) {
 
   setupListeners(product);
 
-  modal.showModal();
+  openModal(modal.id);
 }
 
 function setupListeners(product) {
@@ -131,10 +119,12 @@ function setupListeners(product) {
 
     addToCart(product, selectedOptions, finalPrice);
 
-    modal.close();
+    closeModal(modal.id);
 
     updateCartCounter();
 
-    console.log("Producto agregado al carrito");
+    showSuccessToast(
+      `${product.name} (${selectedOptions.color}) added to cart`
+    );
   });
 }
