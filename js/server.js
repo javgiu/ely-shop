@@ -2,6 +2,7 @@ import { createServer } from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { error } from "node:console";
+import * as db from "./db.js";
 
 const hostname = "127.0.0.1";
 const port = 3000;
@@ -15,9 +16,34 @@ const MIME_TYPES = {
     ".svg": "image/svg+xml",
 };
 
-const server = createServer((req, res) => {
+// Init database
+
+try {
+    db.initDatabaseTest();
+} catch (error) {
+    console.log("Failed to initialize database: ", error);
+}
+
+const server = createServer(handleRequests);
+
+async function handleRequests(req, res) {
     const urlPath = req.url === "/" ? "/index.html" : req.url;
     console.log("URL: ", urlPath);
+
+    if (urlPath === "/favicon.ico") return;
+
+    if (urlPath === "/products") {
+        try {
+            console.log("Starting products");
+            res.writeHead(200, { "Content-Type": "application/json" });
+            const productsJSON = await db.getAllProducts();
+            res.end(productsJSON);
+            return;
+        } catch (error) {
+            res.end("[]");
+            return;
+        }
+    }
 
     let filePath = path.join(".", urlPath);
 
@@ -38,7 +64,7 @@ const server = createServer((req, res) => {
         res.writeHead(200, { "Content-Type": contentType });
         res.end(data);
     });
-});
+}
 
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);

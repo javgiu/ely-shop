@@ -1,28 +1,38 @@
-import { products } from "../data/products.js";
+// import { products } from "../data/products.js";
+import { requestProducts } from "./fetchAPI.js";
 import { createProductCard } from "../components/product-card.js";
 import { openProductModal } from "../components/product-modal.js";
 
-export function renderProducts() {
-  const productsGrid = document.querySelector(".products-grid");
+export async function renderProducts() {
+    try {
+        const productsGrid = document.querySelector(".products-grid");
 
-  if (!productsGrid) return;
+        if (!productsGrid) return;
 
-  const productsHTML = products
-    .map((product) => createProductCard(product))
-    .join("");
+        let products = await requestProducts();
 
-  productsGrid.innerHTML = productsHTML;
+        const productsHTML = products
+            .map((product) => createProductCard(product))
+            .join("");
 
-  const viewDetailsLinks = document.querySelectorAll(".view-details-link");
+        productsGrid.innerHTML = productsHTML;
 
-  viewDetailsLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
+        const viewDetailsLinks =
+            document.querySelectorAll(".view-details-link");
 
-      const productId = parseInt(link.dataset.productId);
-      const product = products.find((product) => product.id === productId);
+        viewDetailsLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
 
-      openProductModal(product);
-    });
-  });
+                const productId = parseInt(link.dataset.productId);
+                const product = products.find(
+                    (product) => product.id === productId,
+                );
+
+                openProductModal(product);
+            });
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
