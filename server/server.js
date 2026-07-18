@@ -19,7 +19,8 @@ const MIME_TYPES = {
 // Init database
 
 try {
-    db.initDatabaseTest();
+    await db.initDatabaseTest();
+    console.log("Database ready");
 } catch (error) {
     console.log("Failed to initialize database: ", error);
 }
@@ -34,7 +35,8 @@ async function handleRequests(req, res) {
         try {
             console.log("Starting products");
             res.writeHead(200, { "Content-Type": "application/json" });
-            const productsJSON = await db.getAllProducts();
+            const products = await db.getAllProducts();
+            const productsJSON = JSON.stringify(products);
             res.end(productsJSON);
             return;
         } catch (error) {
@@ -69,3 +71,5 @@ async function handleRequests(req, res) {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+// Fix path traversal attacks exposition

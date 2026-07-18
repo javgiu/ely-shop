@@ -524,8 +524,6 @@ const productsTest = [
     },
 ];
 
-const products = [];
-
 const productsPath = path.resolve("./server/database/products.json");
 
 export async function getAllProducts() {
@@ -542,7 +540,7 @@ export async function getAllProducts() {
 export async function initDatabaseTest() {
     try {
         console.log("Writing products file for test...");
-        fs.writeFile(productsPath, JSON.stringify(productsTest));
+        await fs.writeFile(productsPath, JSON.stringify(productsTest));
     } catch (error) {
         console.log(
             "Failed to write the database with the test products: ",
