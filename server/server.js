@@ -27,7 +27,7 @@ const server = createServer(handleRequests);
 
 async function handleRequests(req, res) {
     const urlPath = req.url === "/" ? "/index.html" : req.url;
-    console.log("URL: ", urlPath);
+    console.log("Requested URL: ", urlPath);
 
     if (urlPath === "/favicon.ico") return;
 
@@ -44,7 +44,7 @@ async function handleRequests(req, res) {
         }
     }
 
-    let filePath = path.join(".", urlPath);
+    let filePath = path.join("./client", urlPath);
 
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || "application/octet-stream";
@@ -53,6 +53,7 @@ async function handleRequests(req, res) {
         if (err) {
             if (err.code === "ENOENT") {
                 res.writeHead(404, { "Content-Type": "text/html" });
+                console.log(filePath);
                 return res.end("<h1>404 File not found</h1>");
             } else {
                 console.log("Error reading file: " + filePath, err);
@@ -61,6 +62,7 @@ async function handleRequests(req, res) {
             }
         }
         res.writeHead(200, { "Content-Type": contentType });
+        console.log("Resolved!");
         res.end(data);
     });
 }

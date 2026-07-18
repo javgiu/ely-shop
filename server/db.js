@@ -526,7 +526,7 @@ const productsTest = [
 
 const products = [];
 
-const productsPath = path.resolve("./js/database/products.json");
+const productsPath = path.resolve("./server/database/products.json");
 
 export async function getAllProducts() {
     const data = await fs.readFile(productsPath, {
