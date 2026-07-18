@@ -13,6 +13,7 @@ const MIME_TYPES = {
     ".png": "image/png",
     ".jpg": "image/jpeg",
     ".svg": "image/svg+xml",
+    ".ico": "image/x-icon",
 };
 
 // Init database
@@ -28,8 +29,6 @@ const server = createServer(handleRequests);
 async function handleRequests(req, res) {
     const urlPath = req.url === "/" ? "/index.html" : req.url;
     console.log("Requested URL: ", urlPath);
-
-    if (urlPath === "/favicon.ico") return;
 
     if (urlPath === "/products") {
         try {

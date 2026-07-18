@@ -1,224 +1,270 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Ely Shop - Artisanal earrings made with love, using polymeric clay and cold porcelain/air dry clay. Elegant and unique designs for every occasion."
-    />
-    <title>Ely Shop</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script type="module" src="js/main.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="brand">
-          <svg
-            width="120"
-            height="60"
-            viewBox="0 0 150 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- Mini arete decorativo -->
-            <circle
-              cx="40"
-              cy="30"
-              r="4"
-              stroke="#D4AF37"
-              stroke-width="1.5"
-              fill="none"
-            />
-            <line
-              x1="40"
-              y1="34"
-              x2="40"
-              y2="42"
-              stroke="#D4AF37"
-              stroke-width="1.5"
-            />
-            <circle cx="40" cy="44" r="3" fill="#D4AF37" />
-            <!-- Texto "Ely" -->
-            <text
-              x="75"
-              y="40"
-              font-family="Cormorant Garamond, serif"
-              font-size="40"
-              font-weight="600"
-              fill="#D4AF37"
-              text-anchor="middle"
-            >
-              Ely
-            </text>
-            <!-- Mini arete decorativo derecho -->
-            <circle
-              cx="110"
-              cy="30"
-              r="4"
-              stroke="#D4AF37"
-              stroke-width="1.5"
-              fill="none"
-            />
-            <line
-              x1="110"
-              y1="34"
-              x2="110"
-              y2="42"
-              stroke="#D4AF37"
-              stroke-width="1.5"
-            />
-            <circle cx="110" cy="44" r="3" fill="#D4AF37" />
-          </svg>
-        </div>
-        <div class="nav-menu-desktop">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="nav-actions">
-          <div class="nav-cart">
-            <button class="cart-button" aria-label="View cart">
-              <i class="fas fa-shopping-cart"></i>
-              <span class="cart-count">0</span>
-            </button>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Ely Shop - Artisanal earrings made with love, using polymeric clay and cold porcelain/air dry clay. Elegant and unique designs for every occasion." />
+        <title>Ely Shop</title>
+        <link
+            rel="shortcut icon"
+            href="favicon.ico"
+            type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="css/styles.css" />
+        <script
+            type="module"
+            src="js/main.js"
+            defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="brand">
+                    <svg
+                        width="120"
+                        height="60"
+                        viewBox="0 0 150 60"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <!-- Mini arete decorativo -->
+                        <circle
+                            cx="40"
+                            cy="30"
+                            r="4"
+                            stroke="#D4AF37"
+                            stroke-width="1.5"
+                            fill="none" />
+                        <line
+                            x1="40"
+                            y1="34"
+                            x2="40"
+                            y2="42"
+                            stroke="#D4AF37"
+                            stroke-width="1.5" />
+                        <circle
+                            cx="40"
+                            cy="44"
+                            r="3"
+                            fill="#D4AF37" />
+                        <!-- Texto "Ely" -->
+                        <text
+                            x="75"
+                            y="40"
+                            font-family="Cormorant Garamond, serif"
+                            font-size="40"
+                            font-weight="600"
+                            fill="#D4AF37"
+                            text-anchor="middle">
+                            Ely
+                        </text>
+                        <!-- Mini arete decorativo derecho -->
+                        <circle
+                            cx="110"
+                            cy="30"
+                            r="4"
+                            stroke="#D4AF37"
+                            stroke-width="1.5"
+                            fill="none" />
+                        <line
+                            x1="110"
+                            y1="34"
+                            x2="110"
+                            y2="42"
+                            stroke="#D4AF37"
+                            stroke-width="1.5" />
+                        <circle
+                            cx="110"
+                            cy="44"
+                            r="3"
+                            fill="#D4AF37" />
+                    </svg>
+                </div>
+                <div class="nav-menu-desktop">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <div class="nav-cart">
+                        <button
+                            class="cart-button"
+                            aria-label="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
 
-          <div
-            class="nav-toggle"
-            id="nav-toggle"
-            role="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            tabindex="0"
-          >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
-    </header>
+                    <div
+                        class="nav-toggle"
+                        id="nav-toggle"
+                        role="button"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                        tabindex="0">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <div class="nav-menu-mobile">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <main>
-      <section id="hero" class="hero">
-        <div class="hero-content">
-          <h1 class="hero-title">Unique Earrings, Handcrafted for You</h1>
-          <p class="hero-subtitle">
-            Discover one-of-a-kind designs made with care
-          </p>
-          <div class="hero-cta">
-            <a href="#shop" class="btn btn-primary">Shop Now</a>
-            <a href="#about" class="btn btn-secondary">Learn More</a>
-          </div>
+        <div class="nav-menu-mobile">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </section>
-      <section id="shop" class="shop-section">
-        <div class="container">
-          <h2 class="section-title">Shop Our Collection</h2>
-          <div class="filter" id="filter"></div>
-          <div class="products-grid" id="products-grid"></div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>
-        &copy; 2025 Ely Shop. Designed by
-        <a href="https://github.com/javgiu" target="_blank">javgiu</a>
-      </p>
-    </footer>
+        <main>
+            <section
+                id="hero"
+                class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Unique Earrings, Handcrafted for You
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover one-of-a-kind designs made with care
+                    </p>
+                    <div class="hero-cta">
+                        <a
+                            href="#shop"
+                            class="btn btn-primary"
+                            >Shop Now</a
+                        >
+                        <a
+                            href="#about"
+                            class="btn btn-secondary"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+            </section>
+            <section
+                id="shop"
+                class="shop-section">
+                <div class="container">
+                    <h2 class="section-title">Shop Our Collection</h2>
+                    <div
+                        class="filter"
+                        id="filter"></div>
+                    <div
+                        class="products-grid"
+                        id="products-grid"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>
+                &copy; 2025 Ely Shop. Designed by
+                <a
+                    href="https://github.com/javgiu"
+                    target="_blank"
+                    >javgiu</a
+                >
+            </p>
+        </footer>
 
-    <!-- Modal de Producto (agregar antes de </body>) -->
-    <div
-      id="product-modal"
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-    >
-      <div class="modal-overlay"></div>
-      <div class="modal-container">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              class="modal-close"
-              aria-label="Close modal"
-              data-modal-close
-            >
-              ×
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Aquí irá el contenido dinámico del producto -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal de Carrito -->
-    <div
-      class="modal"
-      id="cart-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-    >
-      <div class="modal-overlay"></div>
-      <div class="modal-container">
-        <div class="modal-content cart-modal-content">
-          <div class="modal-header">
-            <h2 class="cart-modal-title">Your Cart</h2>
-            <button
-              class="modal-close"
-              aria-label="Close cart"
-              data-modal-close
-            >
-              ×
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="cart-items hidden" id="cart-items"></div>
-            <div class="cart-empty" id="cart-empty">
-              <p>Your cart is empty</p>
-              <button class="btn btn-primary" data-modal-close>
-                Continue Shopping
-              </button>
+        <!-- Modal de Producto (agregar antes de </body>) -->
+        <div
+            id="product-modal"
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true">
+            <div class="modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button
+                            class="modal-close"
+                            aria-label="Close modal"
+                            data-modal-close>
+                            ×
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Aquí irá el contenido dinámico del producto -->
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="cart-footer">
-            <div class="cart-total">
-              <span class="total-label">Total:</span>
-              <span class="total-value" id="cart-total">$0.00</span>
-            </div>
-            <div class="cart-actions">
-              <button class="btn btn-secondary" id="clear-cart-btn">
-                Clear Cart
-              </button>
-              <button class="btn btn-primary" id="checkout-btn">
-                Checkout
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- Toast Container External-->
-    <div id="toast-container" class="toast-container"></div>
-  </body>
+
+        <!-- Modal de Carrito -->
+        <div
+            class="modal"
+            id="cart-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true">
+            <div class="modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-content cart-modal-content">
+                    <div class="modal-header">
+                        <h2 class="cart-modal-title">Your Cart</h2>
+                        <button
+                            class="modal-close"
+                            aria-label="Close cart"
+                            data-modal-close>
+                            ×
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div
+                            class="cart-items hidden"
+                            id="cart-items"></div>
+                        <div
+                            class="cart-empty"
+                            id="cart-empty">
+                            <p>Your cart is empty</p>
+                            <button
+                                class="btn btn-primary"
+                                data-modal-close>
+                                Continue Shopping
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span class="total-label">Total:</span>
+                            <span
+                                class="total-value"
+                                id="cart-total"
+                                >$0.00</span
+                            >
+                        </div>
+                        <div class="cart-actions">
+                            <button
+                                class="btn btn-secondary"
+                                id="clear-cart-btn">
+                                Clear Cart
+                            </button>
+                            <button
+                                class="btn btn-primary"
+                                id="checkout-btn">
+                                Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Toast Container External-->
+        <div
+            id="toast-container"
+            class="toast-container"></div>
+    </body>
 </html>
