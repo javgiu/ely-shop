@@ -1,7 +1,6 @@
 import { createServer } from "node:http";
 import fs from "node:fs";
 import path from "node:path";
-import { error } from "node:console";
 import * as db from "./db.js";
 
 const hostname = "127.0.0.1";
@@ -52,7 +51,7 @@ async function handleRequests(req, res) {
 
     fs.readFile(filePath, "utf-8", (err, data) => {
         if (err) {
-            if (error.code === "ENDENT") {
+            if (err.code === "ENOENT") {
                 res.writeHead(404, { "Content-Type": "text/html" });
                 return res.end("<h1>404 File not found</h1>");
             } else {
