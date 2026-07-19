@@ -534,7 +534,7 @@ export async function getAllProducts() {
     if (products.length === 0) {
         console.log("No products in database");
     }
-    return JSON.stringify(products);
+    return products;
 }
 
 export async function initDatabaseTest() {
@@ -548,3 +548,5 @@ export async function initDatabaseTest() {
         );
     }
 }
+
+// Separate logic of testing and initializing db

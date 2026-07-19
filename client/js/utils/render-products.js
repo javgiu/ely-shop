@@ -9,8 +9,7 @@ export async function renderProducts() {
 
         if (!productsGrid) return;
 
-        let data = await requestProducts();
-        const products = JSON.parse(data);
+        const products = await requestProducts();
 
         const productsHTML = products
             .map((product) => createProductCard(product))

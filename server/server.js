@@ -2,8 +2,8 @@ import { createServer } from "node:http";
 import * as db from "./db.js";
 import router from "./router.js";
 
-const hostname = "127.0.0.1";
-const port = 3000;
+const hostname = process.env.HOSTNAME;
+const port = process.env.PORT;
 
 // Init database
 

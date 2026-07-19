@@ -12,8 +12,6 @@ const MIME_TYPES = {
 };
 
 export async function staticFilesController(res, url) {
-    console.log("Static files controller running");
-
     let filePath = path.join("./client", url);
 
     const ext = path.extname(filePath).toLowerCase();
@@ -23,7 +21,6 @@ export async function staticFilesController(res, url) {
         const data = await fs.readFile(filePath, { encoding: "utf-8" });
 
         res.writeHead(200, { "Content-Type": contentType });
-        console.log("Resolved!");
         res.end(data);
     } catch (err) {
         if (err.code === "ENOENT") {
@@ -37,3 +34,5 @@ export async function staticFilesController(res, url) {
         }
     }
 }
+
+// Implement dirname for static files (maybe in .env?)
