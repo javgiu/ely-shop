@@ -1,0 +1,44 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: var(--shadow-medium);
+    padding: var(--spacing-md);
+    padding-block-start: var(--spacing-xl);
+    border-radius: var(--radius-large);
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    position: absolute;
+    color: var(--color-gold-dark);
+    top: 50%;
+    transform: translateY(-50%) translateX(var(--spacing-xs));
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.input-group input {
+    color: var(--color-black);
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 2px solid var(--color-gold);
+
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: transparent;
+}
+
+.input-group input:focus {
+    outline: none;
+}
+
+.input-group label:has(+ input:focus, + input:valid) {
+    transform: translateY(-170%) scale(0.9);
+}
