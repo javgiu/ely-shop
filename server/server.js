@@ -9,6 +9,8 @@ const port = process.env.PORT;
 
 try {
     await db.initDatabaseTest();
+    await db.setAdmin();
+
     console.log("Database ready");
 } catch (error) {
     console.log("Failed to initialize database: ", error);

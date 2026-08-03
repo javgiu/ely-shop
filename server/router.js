@@ -4,6 +4,7 @@ import { productsRouter } from "./routes/productsRoutes.js";
 import { staticFilesController } from "./controllers/staticFilesController.js";
 import baseController from "./controllers/homeController.js";
 import errorHandler from "./controllers/errorHandler.js";
+import { usersRouter } from "./routes/usersRoutes.js";
 
 export default async function router(req, res) {
     const url = new URL(req.url, "http://127.0.0.1:3000");
@@ -22,6 +23,8 @@ export default async function router(req, res) {
 
         if (mainPath === "products") {
             productsRouter(req, res, { url, cleanPaths });
+        } else if (mainPath === "user") {
+            usersRouter(req, res, { url, cleanPaths });
         } else {
             errorHandler(res, pathname);
         }
